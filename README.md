@@ -1,56 +1,76 @@
-<<<<<<< HEAD
-# Cloud-Enabled-Deployment-
-=======
-# Cloud Enabled Deployment In Action with AWS
+Cloud Enabled Deployment In Action with AWS
+This repository contains four projects that together form a cloud-enabled application. It includes three Spring Boot backend microservices and a React frontend.
 
-This repository contains four projects:
+🚀 Getting Started
+To run this project, you will need Java 21, Maven, and Node.js with npm installed.
 
-- course-service (Spring Boot + MySQL)
-- student-service (Spring Boot + MongoDB)
-- media-service (Spring Boot + Local file storage, can be extended to S3/MinIO)
-- frontend-app (React + TypeScript)
+1. Backend Services
+The backend consists of three separate Spring Boot microservices. Each service can be built and run independently.
 
-## Backend Services
+course-service: Manages courses using a MySQL database.
 
-### 1. course-service
-- Entity: Course(id, name, duration)
-- Endpoints:
-  - GET /courses
-  - GET /courses/{id}
-  - POST /courses
-  - DELETE /courses/{id}
-- Default port: 8081
-- Configure MySQL settings
+student-service: Manages students using a MongoDB database.
 
-### 2. student-service
-- Document: Student(registrationNumber, fullName, address, contact, email)
-- Endpoints:
-  - GET /students
-  - GET /students/{id}
-  - POST /students
-  - DELETE /students/{id}
-- Default port: 8082
-- Configure MongoDB settings
+media-service: Manages file uploads and retrieval, with local disk storage.
 
-### 3. media-service
-- Resource: files
-- Endpoints:
-  - POST /files (multipart/form-data: file)
-  - GET /files (list)
-  - GET /files/{id} (fetch)
-  - DELETE /files/{id} (delete)
-- Default port: 8083
-- Uses local disk storage at `./data/media` by default (override with env var `MEDIA_STORAGE_DIR`).
+Configuration
+Before running, you must configure the database connections in the respective application.properties files for the course-service and student-service.
 
-## Frontend (frontend-app)
-- React + TypeScript + MUI + Axios + Vite app with 3 sections: Courses, Students, Media
-- Scripts:
-  - npm run dev (Vite dev server)
-  - npm run build (TypeScript build + Vite build)
-  - npm run preview (Preview built app)
+Building and Running
+Navigate to the repository's root directory and run the following Maven command to build all three services:
 
-## Build
+mvn clean package -DskipTests
 
-- Backend: run `mvn -q -e -DskipTests package` at repo root to build services.
-- Frontend: run `npm install` then `npm run dev` inside `frontend-app`.
->>>>>>> 63983ca (Initial commit)
+After the build is complete, you can run each service from its respective directory:
+
+# Example: Running the student-service
+cd student-service
+java -jar target/student-service-0.0.1-SNAPSHOT.jar
+
+2. Frontend Application
+The frontend is a React application built with TypeScript.
+
+Building and Running
+Navigate to the frontend-app directory.
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+The application will be accessible at http://localhost:8080 (or another port specified by Vite).
+
+🧩 Project Breakdown
+course-service
+Description: This Spring Boot microservice is responsible for managing all course-related data. It uses MySQL as its database, relying on Spring Data JPA and Hibernate for data persistence. It provides standard REST API endpoints to perform CRUD (Create, Read, Update, Delete) operations on course entities.
+
+Technology: Spring Boot, Maven, MySQL
+
+Port: 8081
+
+student-service
+Description: This is a Spring Boot microservice dedicated to managing student information. It uses a MongoDB database for data storage, leveraging Spring Data MongoDB for its repository and document-handling features. It exposes REST API endpoints for managing student documents.
+
+Technology: Spring Boot, Maven, MongoDB
+
+Port: 8082
+
+media-service
+Description: This service handles all media-related tasks, such as file uploads and retrieval. It is a Spring Boot service that, by default, uses the local file system to store media. This can be easily extended to a cloud-based solution like AWS S3 or MinIO.
+
+Technology: Spring Boot, Maven, Local File Storage
+
+Port: 8083
+
+🎥 Video Demonstrations
+Deployment to AWS
+Add video link for AWS deployment here.
+
+Deployment to GCP
+Add video link for GCP deployment here.
+
+📜 License
+This project is licensed under the MIT License.
+
+Link to MIT License
