@@ -74,10 +74,10 @@ The application will be accessible at **[http://localhost:3000](http://localhost
 
 ## 🎥 Video Demonstrations
 
-* **Deployment to AWS** – Add video link here
-* **Deployment to GCP** – Add video link here
+* **Course Service Deployment to AWS** – [Click here](https://drive.google.com/file/d/1FEODhOG_X7TdLAYVQCGz6bFXqzAENTRB/view?usp=drive_link)
 
----
+* **Course Service Deployment to GCP** – [Click here](https://drive.google.com/your-gcp-video-link)
+
 
 ## 📜 License
 
