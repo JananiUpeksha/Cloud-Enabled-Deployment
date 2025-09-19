@@ -76,7 +76,7 @@ The application will be accessible at **[http://localhost:3000](http://localhost
 
 * **Course Service Deployment to AWS** – [Click here](https://drive.google.com/file/d/1FEODhOG_X7TdLAYVQCGz6bFXqzAENTRB/view?usp=drive_link)
 
-* **Course Service Deployment to GCP** – [Click here](https://drive.google.com/file/d/1rhp5t9OZ002kM0EAPBcxK_V0RrQiTTJo/view?usp=sharing)
+* **Course Service Deployment to GCP** – [Click here](https://drive.google.com/file/d/1NUnmX1-yN5wJOxLXzlIHSgZnqa8J2NWM/view?usp=sharing)
 
 
 ## 📜 License
