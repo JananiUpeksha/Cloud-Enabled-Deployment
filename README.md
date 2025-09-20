@@ -5,6 +5,13 @@
 This repository contains four projects that together form a cloud-enabled application. It includes three Spring Boot backend microservices and a React frontend.
 
 ---
+# Owner Details
+
+Janani Upeksha Perera 
+
+2301671073
+
+upekshakeshani@gmaail.com
 
 ## 🚀 Getting Started
 
